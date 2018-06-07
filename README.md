@@ -1,11 +1,11 @@
 # text-detection-ctpn(for CPU version)
 
-  The original repo please click the link [here](https://github.com/eragonruan/text-detection-ctpn)
+  The original repo, please click the link [here](https://github.com/eragonruan/text-detection-ctpn)
 
 ***
 # setup
 - requirements: tensorflow1.8.0, cython0.28.2, opencv-python, easydict,(recommend to install Anaconda)
-- if you do not have a gpu device,follow here to [setup](https://github.com/eragonruan/text-detection-ctpn/issues/43)
+- if you do not have a gpu device, follow here to [setup](https://github.com/eragonruan/text-detection-ctpn/issues/43) or you can try as follows.
 
 This is my way:
 (0)download the checkpoints from release, unzip it in xxx/text-detection-ctpn-master/checkpoints/
