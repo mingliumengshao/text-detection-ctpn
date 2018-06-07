@@ -1,6 +1,6 @@
 # text-detection-ctpn(for CPU version)
 
-  The original repo, please click the link [here](https://github.com/eragonruan/text-detection-ctpn)
+  The original repo: please click the link [here](https://github.com/eragonruan/text-detection-ctpn)
 
 ***
 # setup
@@ -20,7 +20,7 @@ for example my path is:
 so:             
 python setup.py build_ext --include-dirs=/usr/local/lib/python2.7/dist-packages/numpy/core/include
 
-(6) by execute (5), a new "build" directory will be create. Open the "build" directory and copy the .so file from the "build" directory to the xxx/text-detection-ctpn-master/lib/utils.
+(6) by execute (5), a new "build" directory will be create. Open the "build" directory and copy the .so file from the "build" directory to the xxx/text-detection-ctpn-master/lib/utils.                      
 (7) cd xxx/text-detection-ctpn-master
 and execute: python ./ctpn/demo.py
 
@@ -30,7 +30,7 @@ now, you will see the processed demo results under directory: xxx/text-detection
 there are some parameters you may need to modify according to your requirement, you can find them in ctpn/text.yml
 - USE_GPU_NMS # whether to use nms implemented in cuda or not
 - DETECT_MODE # H represents horizontal mode, O represents oriented mode, default is H
-- checkpoints_path # the model I provided is in checkpoints/, if you train the model by yourself,it will be saved in output/
+- checkpoints_path # the model I provided is in checkpoints/, if you train the model by yourself, it will be saved in output/
 ***
 # training
 ## prepare data
@@ -38,7 +38,7 @@ there are some parameters you may need to modify according to your requirement, 
 - Second, prepare the training data as referred in paper, or you can download the data I prepared from [google drive](https://drive.google.com/open?id=0B_WmJoEtfGhDRl82b1dJTjB2ZGc) or [baidu yun](https://pan.baidu.com/s/1kUNTl1l). 
 
 - then, extract the data (VOCdevkit),and put it in data/VOCdevkit. execute:ln -s VOCdevkit VOCdevkit2007
-- the tensorflow version that original repo used is 1.3.0, before (7) you have to change gen_logging_ops._image_summary(...) to 
+- the tensorflow version that original repo used is 1.3.0, but my tensorflow version is 1.8.0, so you have to change gen_logging_ops._image_summary(...) to 
 gen_logging_ops.image_summary(...) in the file ./lib/fast_rcnn/train.py .if not, you will get a bug report about "gen_logging_ops._image_summary(...)".
 
 
